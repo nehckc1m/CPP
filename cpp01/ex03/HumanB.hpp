@@ -6,8 +6,11 @@
 class HumanB{
 	private:
 		std::string _name;
+		Weapon*	_weapon;
 	public:
-		HumanB();
-		std::string* _type;
+		HumanB(const std::string& name);
+		void setWeapon(Weapon& weapon);
 		void attack();
-}
+};
+
+#endif

@@ -1,12 +1,8 @@
-NAME = HI_THIS_IS_BRAIN
+NAME = Sed_is_for_losers
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp\
-	Weapon.cpp\
-	HumanA.cpp\
-	HumanB.cpp\
-	
+SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

@@ -1,12 +1,9 @@
-NAME = HI_THIS_IS_BRAIN
+NAME = Harl_2.0
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp\
-	Weapon.cpp\
-	HumanA.cpp\
-	HumanB.cpp\
-	
+SRC = main.cpp \
+	  Harl.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
