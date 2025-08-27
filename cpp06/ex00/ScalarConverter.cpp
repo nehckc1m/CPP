@@ -38,9 +38,10 @@ bool ScalarConverter::checkArg(const std::string &literal)
 
     while (literal[++i])
     {
+        std::cout << literal[i] << std::endl;
         if (i == 0 && (literal[i] == '+' || literal[i] == '-'))
             i++;
-        if (!(literal[i] >= '1' && literal[i] <= '9') && literal[i] != '.' && literal[i] != 'f')
+        if (!(literal[i] >= '0' && literal[i] <= '9') && literal[i] != '.' && literal[i] != 'f')
             return (0);
         if (literal[i] == 'f' && literal[i + 1])
             return (0);
@@ -49,7 +50,6 @@ bool ScalarConverter::checkArg(const std::string &literal)
 }
 
 void ScalarConverter::convert(const std::string &literal) {
- 
     char *end;
     double value = std::strtod(literal.c_str(), &end);
     size_t pos;
@@ -74,7 +74,7 @@ void ScalarConverter::convert(const std::string &literal) {
         return;
 
     }
-    if (!checkArg(literal))
+    if (checkArg(literal) == 0)
     {
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
